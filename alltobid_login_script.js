@@ -32,7 +32,7 @@ function getRequestId() {
     return getTimestamp();
 }
 function parseJSON(str) {
-    if(/"\{.*/.test(str)) {
+    if(/^"\{.*/.test(str)) {
         console.log('It is not a standard JSON string, gotta remove the leading " and ending "');
         str = str.replace(/^"|"$/g,'');
     }
